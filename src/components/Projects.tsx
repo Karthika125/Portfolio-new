@@ -7,15 +7,25 @@ import { FaGithub, FaExternalLinkAlt, FaCode, FaDatabase, FaMobile, FaServer, Fa
 import { Card3D, SpotlightEffect, AnimatedText, StaggerContainer, StaggerItem } from './AnimatedElements';
 import BackgroundEffect from './BackgroundEffect';
 
+interface Project {
+  title: string;
+  description: string;
+  category: 'development' | 'data';
+  tags: string[];
+  demoLink: string;
+  githubLink: string;
+  inProgress?: boolean;
+}
+
 const Projects = () => {
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
 
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState<'all' | 'development' | 'data'>('all');
 
-  const getProjectIcon = (category, title) => {
+  const getProjectIcon = (category: 'development' | 'data', title: string) => {
     if (category === 'development') {
       if (title.includes('Mobile') || title.includes('App')) {
         return <FaMobile size={60} />;
@@ -34,7 +44,7 @@ const Projects = () => {
     return <FaCogs size={60} />;
   };
   
-  const getGradient = (index) => {
+  const getGradient = (index: number) => {
     const gradients = [
       'from-purple-500 to-blue-500',
       'from-blue-500 to-teal-500',
@@ -47,7 +57,7 @@ const Projects = () => {
     return gradients[index % gradients.length];
   };
 
-  const projects = [
+  const projects: Project[] = [
     {
       title: 'ClaimIT – Lost & Found App',
       description: 'A mobile app that helps users post, search, and communicate regarding lost and found items. Includes chat and real-time alerts.',
