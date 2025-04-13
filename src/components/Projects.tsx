@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import { FaGithub, FaExternalLinkAlt, FaCode, FaDatabase, FaMobile, FaServer, FaChartBar, FaCogs } from 'react-icons/fa';
 import { Card3D, SpotlightEffect, AnimatedText, StaggerContainer, StaggerItem } from './AnimatedElements';
 import BackgroundEffect from './BackgroundEffect';
+import Image from 'next/image';
 
 interface Project {
   title: string;
@@ -58,23 +59,41 @@ const Projects = () => {
     return gradients[index % gradients.length];
   };
 
+  // Add a public path to the image URLs to match where the images actually are
+  const getImagePath = (path: string | undefined) => {
+    if (!path) return undefined;
+    // Fix path to match the actual location of the images
+    return path.replace('/assets/', '/');
+  };
+
   const projects: Project[] = [
     {
       title: 'ClaimIT – Lost & Found App',
       description: 'A mobile app that helps users post, search, and communicate regarding lost and found items. Includes chat and real-time alerts.',
       category: 'development',
       tags: ['React Native', 'Firebase', 'Mobile App'],
+      demoLink: 'https://claimit-five.vercel.app/',
+      githubLink: 'https://github.com/Karthika125/claimit.git',
+      image: '/assets/images/Claimit.jpeg',
+    },
+    {
+      title: 'NEXT App – Nurturing Entrepreneurs and Xceptional Talents',
+      description: 'A collaborative platform connecting students, startups, and funding agencies to foster innovation and entrepreneurship.',
+      category: 'development',
+      tags: ['React.js', 'Node.js', 'MongoDB', 'Express.js'],
       demoLink: '#',
       githubLink: 'https://github.com/Karthika125',
       inProgress: true,
+      image: '/assets/images/next.jpeg',
     },
     {
       title: 'HomeSync – Roommate & Rental Platform',
       description: 'A user-friendly web platform for managing rentals and roommate listings with authentication and listing search features.',
       category: 'development',
       tags: ['React.js', 'Node.js', 'MongoDB', 'Express.js'],
-      demoLink: '#',
+      demoLink: 'https://homesynk.netlify.app/',
       githubLink: 'https://github.com/Karthika125',
+      image: '/assets/images/homesync.jpeg',
     },
     {
       title: 'Tour Management System',
@@ -82,15 +101,18 @@ const Projects = () => {
       category: 'development',
       tags: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
       demoLink: '#',
-      githubLink: 'https://github.com/Karthika125',
+      githubLink: 'https://github.com/Karthika125/Travel-project',
+      // Use a placeholder image for the missing tour project
+      image: '/images/tour-placeholder.jpg',
     },
     {
       title: 'SAIT Placement Portal',
       description: 'A dynamic job portal with resume analysis, mock tests, company registration, and student application tracking.',
       category: 'development',
       tags: ['React.js', 'Supabase', 'PDF Utils'],
-      demoLink: '#',
+      demoLink: 'https://sait-placement-portal.vercel.app/',
       githubLink: 'https://github.com/Karthika125',
+      image: '/assets/images/saitplacement.jpeg',
     },
     {
       title: 'Smart Recycle Hub',
@@ -98,7 +120,8 @@ const Projects = () => {
       category: 'development',
       tags: ['React', 'Firebase'],
       demoLink: '#',
-      githubLink: 'https://github.com/Karthika125',
+      githubLink: 'https://github.com/Karthika125/My-Recycle-App.git',
+      image: '/assets/images/myrecycleapp.jpeg',
     },
     {
       title: 'Hotel Booking Data Analysis',
@@ -106,7 +129,8 @@ const Projects = () => {
       category: 'data',
       tags: ['Python', 'Pandas', 'Excel'],
       demoLink: '#',
-      githubLink: 'https://github.com/Karthika125',
+      githubLink: 'https://github.com/Karthika125/Hotel-Cancellation-Data-Analysis',
+      image: '/assets/images/hotelanalysis.jpeg',
     },
     {
       title: 'IPL Data Analysis',
@@ -114,7 +138,8 @@ const Projects = () => {
       category: 'data',
       tags: ['Power BI', 'Data Visualization'],
       demoLink: '#',
-      githubLink: 'https://github.com/Karthika125',
+      githubLink: 'https://github.com/Karthika125/IPL-PowerBi.git',
+      image: '/assets/images/iplpowerbipic.jpeg',
     },
   ];
 
@@ -206,7 +231,7 @@ const Projects = () => {
                     {project.image ? (
                       <div className="absolute inset-0">
                         <img 
-                          src={project.image} 
+                          src={getImagePath(project.image)} 
                           alt={project.title} 
                           className="w-full h-full object-cover"
                         />
