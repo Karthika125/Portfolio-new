@@ -131,10 +131,12 @@ const Hero = () => {
           >
             <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-primary p-2">
               <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-b from-primary to-secondary relative">
-                {/* Profile image placeholder - replace with actual image */}
-                <div className="absolute inset-0 flex items-center justify-center text-white text-6xl font-bold">
-                  KS
-                </div>
+                {/* Profile image */}
+                <img 
+                  src="/assets/images/kathu-white.jpg" 
+                  alt="Karthika Suresh"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </motion.div>
