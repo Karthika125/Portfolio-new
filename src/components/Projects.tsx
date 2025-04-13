@@ -62,8 +62,8 @@ const Projects = () => {
   // Add a public path to the image URLs to match where the images actually are
   const getImagePath = (path: string | undefined) => {
     if (!path) return undefined;
-    // Fix path to match the actual location of the images
-    return path.replace('/assets/', '/');
+    // The images are already in the public folder, so return the path as is
+    return path;
   };
 
   const projects: Project[] = [
@@ -229,19 +229,19 @@ const Projects = () => {
                 >
                   <div className={`h-48 relative overflow-hidden ${project.image ? '' : `bg-gradient-to-br ${getGradient(index)}`} opacity-90`}>
                     {project.image ? (
-                      <div className="absolute inset-0">
+                      <div className="absolute inset-0 z-0">
                         <img 
                           src={getImagePath(project.image)} 
                           alt={project.title} 
                           className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                       </div>
                     ) : null}
                     <motion.div 
-                      className="absolute inset-0 flex items-center justify-center text-white"
-                      initial={{ opacity: 0.6, scale: 0.9 }}
-                      whileHover={{ opacity: 1, scale: 1.05 }}
+                      className="absolute inset-0 flex items-center justify-center text-white z-10"
+                      initial={{ opacity: 0.3, scale: 0.9 }}
+                      whileHover={{ opacity: 0.7, scale: 1.05 }}
                       transition={{ duration: 0.3 }}
                     >
                       {getProjectIcon(project.category, project.title)}
