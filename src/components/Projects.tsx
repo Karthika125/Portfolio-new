@@ -15,6 +15,7 @@ interface Project {
   demoLink: string;
   githubLink: string;
   inProgress?: boolean;
+  image?: string;  // Path to project image
 }
 
 const Projects = () => {
@@ -201,7 +202,17 @@ const Projects = () => {
                   className="bg-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-dark-light hover:border-primary/30 h-full flex flex-col"
                   intensity={10}
                 >
-                  <div className={`h-48 relative overflow-hidden bg-gradient-to-br ${getGradient(index)} opacity-90`}>
+                  <div className={`h-48 relative overflow-hidden ${project.image ? '' : `bg-gradient-to-br ${getGradient(index)}`} opacity-90`}>
+                    {project.image ? (
+                      <div className="absolute inset-0">
+                        <img 
+                          src={project.image} 
+                          alt={project.title} 
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                      </div>
+                    ) : null}
                     <motion.div 
                       className="absolute inset-0 flex items-center justify-center text-white"
                       initial={{ opacity: 0.6, scale: 0.9 }}

@@ -78,7 +78,7 @@ const Certifications = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My <span className="text-primary">Certifications</span></h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-light-darker max-w-3xl mx-auto text-lg">
-            Professional certifications that demonstrate my commitment to continuous learning and skill development.
+            Professional certifications that showcase my technical skills and expertise.
           </p>
         </motion.div>
         
@@ -124,20 +124,7 @@ const Certifications = () => {
           ))}
         </motion.div>
         
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 p-6 bg-dark-lighter rounded-lg text-center max-w-2xl mx-auto"
-        >
-          <p className="text-light-darker mb-2">
-            Continuous learning is a key part of my professional development. 
-            I regularly pursue new certifications and courses to stay updated with the latest technologies and methodologies.
-          </p>
-          <span className="text-primary font-medium">
-            Currently pursuing: Advanced React Patterns and Performance Optimization
-          </span>
-        </motion.div>
+        {/* Continuous learning paragraph removed as requested */}
       </div>
     </section>
   );

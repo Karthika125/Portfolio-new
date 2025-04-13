@@ -36,7 +36,7 @@ const Education = () => {
         'Advanced Python Programming',
         'React & React Native Development',
         'Data Visualization Techniques',
-        'System Design Principles'
+      
       ]
     },
     {
@@ -49,16 +49,7 @@ const Education = () => {
         'Database Design & Management'
       ]
     },
-    {
-      title: "Academic Achievements",
-      icon: <FaAward size={24} />,
-      items: [
-        'Dean\'s List for Academic Excellence',
-        'Top 5% in Computer Science Fundamentals',
-        'Outstanding Project Award',
-        'Peer Mentor for Junior Students'
-      ]
-    }
+    
   ];
 
   const fadeInUpVariants = {
@@ -155,24 +146,6 @@ const Education = () => {
                     </div>
                   </motion.div>
                 ))}
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="mt-8 bg-dark p-6 rounded-lg border border-dark-light"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <h3 className="text-xl font-bold mb-4">Educational Philosophy</h3>
-              <p className="text-light-darker">
-                I believe in a balanced approach to education that combines theoretical knowledge with practical application. My academic journey has been fueled by curiosity and a desire to solve complex problems through innovative technology solutions.
-              </p>
-              <div className="mt-4 flex justify-end">
-                <div className="flex items-center gap-2 text-primary text-sm">
-                  <FaBook />
-                  <span>Continuous learner</span>
-                </div>
               </div>
             </motion.div>
           </div>
