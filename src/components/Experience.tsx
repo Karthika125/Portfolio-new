@@ -61,9 +61,9 @@ const Experience = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Work <span className="text-primary">Experience</span></h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="text-light-darker max-w-3xl mx-auto text-lg">
+          {/* <p className="text-light-darker max-w-3xl mx-auto text-lg">
             My professional journey has exposed me to various aspects of software development and data analytics, allowing me to build a diverse skill set.
-          </p>
+          </p> */}
         </motion.div>
         
         <div 

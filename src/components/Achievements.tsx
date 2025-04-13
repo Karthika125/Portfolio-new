@@ -14,7 +14,7 @@ const Achievements = () => {
     {
       title: 'Runner-up – Tinkerhack Hackathon',
       organization: 'Tinkerhub',
-      date: '2023',
+      date: '2025',
       icon: <FaTrophy size={40} />,
       description: 'Contributed to the development of an innovative project with a team, earning the runner-up position among 30+ participating teams.',
     },

@@ -172,7 +172,7 @@ const Contact = () => {
               <ul className="space-y-2 text-light-darker">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-primary rounded-full"></span>
-                  <span>Full-time opportunities</span>
+                  <span>Internship opportunities</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-primary rounded-full"></span>

@@ -80,9 +80,9 @@ const Projects = () => {
       title: 'NEXT App – Nurturing Entrepreneurs and Xceptional Talents',
       description: 'A collaborative platform connecting students, startups, and funding agencies to foster innovation and entrepreneurship.',
       category: 'development',
-      tags: ['React.js', 'Node.js', 'MongoDB', 'Express.js'],
+      tags: ['React Native', 'Node.js', 'Express.js'],
       demoLink: '#',
-      githubLink: 'https://github.com/Karthika125',
+      githubLink: 'https://github.com/Karthika125/NEXT-Application',
       inProgress: true,
       image: '/assets/images/next.jpeg',
     },
@@ -92,7 +92,7 @@ const Projects = () => {
       category: 'development',
       tags: ['React.js', 'Node.js', 'MongoDB', 'Express.js'],
       demoLink: 'https://homesynk.netlify.app/',
-      githubLink: 'https://github.com/Karthika125',
+      githubLink: 'https://github.com/Karthika125/Rental-System-Application',
       image: '/assets/images/homesync.jpeg',
     },
     {
@@ -102,8 +102,8 @@ const Projects = () => {
       tags: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
       demoLink: '#',
       githubLink: 'https://github.com/Karthika125/Travel-project',
-      // Use a placeholder image for the missing tour project
-      image: '/images/tour-placeholder.jpg',
+      // Use gradient instead of placeholder image
+      // image: '/images/tour-placeholder.jpg',
     },
     {
       title: 'SAIT Placement Portal',
@@ -111,7 +111,7 @@ const Projects = () => {
       category: 'development',
       tags: ['React.js', 'Supabase', 'PDF Utils'],
       demoLink: 'https://sait-placement-portal.vercel.app/',
-      githubLink: 'https://github.com/Karthika125',
+      githubLink: 'https://github.com/Karthika125/Placement-Portal',
       image: '/assets/images/saitplacement.jpeg',
     },
     {
