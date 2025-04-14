@@ -22,15 +22,15 @@ const Experience = () => {
     {
       position: 'Data Analytics Intern',
       company: 'Zidio Development',
-      period: 'Oct 2024 - Dec 2024',
-      location: 'Bengaluru',
+      period: 'Feb 2025 - Mar 2025',
+      location: 'Remote',
       description: 'Collected, cleaned, and visualized data for business intelligence insights. Utilized Python and Excel for data analysis.',
       skills: ['Python', 'Excel', 'Data Visualization', 'Data Cleaning', 'Business Intelligence'],
     },
     {
       position: 'Data Analytics Intern',
       company: 'Mainflow Technologies',
-      period: 'July 2024 - Sept 2024',
+      period: 'Jan 2025 - Mar 2025',
       location: 'Remote',
       description: 'Analyzed datasets using Python and Excel to provide actionable business insights. Created reports and visualizations to optimize decision-making.',
       skills: ['Python', 'Excel', 'Data Analysis', 'Reporting', 'Visualization'],
